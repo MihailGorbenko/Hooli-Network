@@ -1,0 +1,30 @@
+
+.card#profile_photos {
+    margin-top: 1.5em;
+
+    .card-header {
+       color: #4e5665;
+       font-weight: bold;
+
+    }
+
+    .card-body {
+        background-color: rgba(226, 226, 226, 0.534);
+
+        .row > * {
+            padding-left: 0.3em;
+            padding-right: 0.3em;
+        }
+        .row {
+            margin-bottom: 0.6em;
+        }
+
+        .thumbnail{
+            display: block;
+            
+            img {
+                width: 11vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App</title>
+    <link rel="stylesheet" href="./styles/dist/styles.css">
+
+</head>
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top ">
+        <div class="container-fluid  nav-container" >
+            <a href="#" class="navbar-brand ">
+                <svg id="nav_home_icon" heigth="24" width="24" fill="currentColor">
+                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#globe-americas"></use>
+                </svg>
+                Hooli Network
+            </a>
+            <!-- Post button -->
+
+            <button class="btn btn-light  post-button d-block d-lg-none">
+                <svg id="post_button_icon" fill="currentColor">
+                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-fill"></use>
+                </svg>
+                Post
+            </button>
+
+            <!-- Toggler -->
+
+            <button  class="navbar-toggler mb-1"
+                     role="button"
+                     data-bs-toggle="collapse"
+                     data-bs-target="#collapseContent"
+                     aria-expanded="false"
+                     aria-controls="collapseContent"
+                     aria-label="toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsed block -->
+
+            <div class="collapse navbar-collapse"
+                 id="collapseContent">
+
+                 <!-- Home link -->
+
+                <ul class="navbar-nav me-auto  mb-lg-0">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <svg id="nav_home_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#house-fill"></use>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+
+                    <!-- Notifications link -->
+
+                    <li class="nav-item position-relative">
+                        <a href="#" class="nav-link">
+                            <div class="badge-top">5</div>
+                            <svg id="nav_notifications_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#bell-fill"></use>
+                            </svg>
+                            Notifications     
+                        </a>
+                        
+                    </li>
+
+                    <!-- Messages link -->
+
+                    <li class="nav-item position-relative">
+                        <a href="#" class="nav-link">
+                            <div class="badge-top">99+</div>
+                            <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#envelope-fill"></use>
+                            </svg>
+                            Messages
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-block d-lg-none">
+                        <a href="#" class="nav-link">
+                            <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#person-circle"></use>
+                            </svg>
+                            Profile
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-block d-lg-none">
+                        <a href="#" class="nav-link">
+                            <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#gear-fill"></use>
+                            </svg>
+                            Settings
+                        </a>
+                    </li>
+
+                    <hr class="d-inline d-lg-none" />
+
+                    <li class="nav-item d-block d-lg-none">
+                        <a href="#" class="nav-link">
+                            <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#arrow-left-circle-fill"></use>
+                            </svg>
+                            Logout
+                        </a>
+                    </li>
+                </ul> 
+
+                
+
+                 <!-- Search -->
+
+                 <form id="search" role="search" class="nav-item">
+                    <input type="text" class="form-control me-1" id="search_input" placeholder="Search">
+                    <div class="placeholder">
+                        <svg  id="nav_input_icon"  fill="currentColor">
+                            <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#search"></use>
+                        </svg>
+                    </div>               
+                </form>
+
+            <!-- Post button -->
+
+            <button class="btn btn-light nav-item post-button d-none  ms-2 d-lg-block">
+                <svg id="post_button_icon" fill="currentColor">
+                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-fill"></use>
+                </svg>
+                Post
+            </button>
+
+             <!-- Options menu -->
+
+            <div class="dropdown ms-2 nav-item d-none d-lg-block" id="nav-options">
+                <button type="button" class="btn btn-sm btn-primary dropdown-toggle " data-bs-toggle="dropdown">
+                    <img src="./images/profile_photo_min.jpg"  class="img-fluid rounded" alt="profile photo">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+
+    <main>
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+
+                <!-- Profile column-->
+
+                <div id="profile" class="d-none d-md-block col-md-3 ">
+                    <div class="card shadow-lg" id="profile-resume">
+                        <img class="card-image-top img-fluid"
+                             alt="profile background image"
+                             src="./images/profile_photo.jpg"> 
+                        <div class="card-body">
+                            <img src="./images/profile_photo_min.jpg"
+                                 class="card-img img-thumbnail"
+                                 id="profile_image">
+                            <h4 class="card-title">
+                                <span id="profile_owner_name">
+                                    Miha Go<small class="card-subtile text-muted">@mihago</small>
+                                </span>
+                            </h4>
+                            <p class="card-text">
+                                What do you think about this page?
+                            </p>
+                            <ul class="list-inline d-flex">
+                                <li id="profile-posts">
+                                    <a href="#">
+                                        <span id="profile-stats">Posts</span>
+                                        <br/>
+                                        <span id="profile-value">99k</span>
+                                    </a>
+                                </li>
+                                <li id="profile-following">
+                                    <a href="#">
+                                        <span id="profile-stats">Following</span>
+                                        <br/>
+                                        <span id="profile-value">7</span>
+                                    </a>
+                                </li>
+                                <li id="profile-followers">
+                                    <a href="#">
+                                        <span id="profile-stats">Followers</span>
+                                        <br/>
+                                        <span id="profile-value">132k</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="profile_photos" class="card shadow-lg">
+                        <div class="card-header">
+                            Gallery
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6" >
+                                    <a href="#" class="thumbnail">
+                                        <img class="img-thumbnail" src="./images/galery_img2.jpg">
+                                    </a>
+                                </div>
+                                <div class="col-6" >
+                                    <a href="#" class="thumbnail">
+                                        <img class="img-thumbnail" src="./images/galery_img1.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6" >
+                                    <a href="#" class="thumbnail">
+                                        <img class="img-thumbnail" src="./images/galery_img3.jpg">
+                                    </a>
+                                </div>
+                                <div class="col-6" >
+                                    <a href="#" class="thumbnail">
+                                        <img class="img-thumbnail" src="./images/galery_img4.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main column -->
+
+                <div id="main_content" class="col-12 col-md-6">
+                    <div class="card shadow-lg" id="main_form_card">
+
+                        <!-- New message form -->
+
+                        <form  id="new_message">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="What's new?" aria-label="What's new?">
+                                <button class="btn btn-outline-primary" type="button" id="add_photo_btn">
+                                    <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                        <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#camera-fill"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form> 
+                    </div>
+
+                    <!-- Feed -->
+
+                    <div class="card shadow-lg mt-2" id="feed">
+                        <ul class="list-unstyled feed-list">
+                            <!-- fn-1 -->
+                            <li id="feed_node">
+                                <img id="feed_img" src="./images/comment_img1.jpg" class="rounded-circle">
+                                <div class="feed-post">
+                                    <h5 id="info">
+                                        <span id="name">Bellfa</span>
+                                        <span id="user_name"> @belf_amy</span>
+                                        <span id="timestamp"> - 3h</span>
+                                    </h5>
+                                    <p id="post_content">
+                                         Люблю Кексика и Мифу :)
+                                    </p>
+                                </div>
+                                <ul class="actions-list list-inline">
+                                    <li>
+                                        <a href="#" id="repost">
+                                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#reply-fill"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="repost_users">
+                                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#arrow-repeat"></use>
+                                            </svg>
+                                            <span id="repost_count">6</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="add_favorites">
+                                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#star-fill"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- fn-2 -->
+                            <li id="feed_node">
+                                <img id="feed_img" src="./images/comment_img2.jpg" class="rounded-circle">
+                                <div class="feed-post">
+                                    <h5 id="info">
+                                        <span id="name">Vitos</span>
+                                        <span id="user_name"> @vitos</span>
+                                        <span id="timestamp"> - 1h</span>
+                                    </h5>
+                                    <p id="post_content">
+                                          Как дела?
+                                    </p>
+                                </div>
+                                <ul class="actions-list list-inline">
+                                    <li>
+                                        <a href="#" id="repost">
+                                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#reply-fill"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="repost_users">
+                                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#arrow-repeat"></use>
+                                            </svg>
+                                            <span id="repost_count">2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="add_favorites">
+                                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#star"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Pagination -->
+
+                    <nav id="pagination" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a href="#" class="page-link">
+                                    <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                        <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-left"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a href="#" class="page-link">
+                                    1
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">
+                                    2
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">
+                                    3
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a href="#" class="page-link">
+                                    <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                        <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-right"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="right_content" class="d-none d-md-block col-md-3">
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

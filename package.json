@@ -1,0 +1,19 @@
+{
+  "name": "bootstrap_app",
+  "version": "1.0.0",
+  "description": "bootstrap using application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles:w": "sass styles/scss/base.scss styles/dist/styles.css --watch --load-path=node_modules/bootstrap/scss/"
+  },
+  "author": "Miha Go",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2"
+  }
+}
