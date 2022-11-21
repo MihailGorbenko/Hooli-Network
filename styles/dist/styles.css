@@ -8461,6 +8461,72 @@ nav .post-button svg {
   font-weight: bold;
 }
 
+.card#followers_card .card-header {
+  color: gray;
+}
+.card#followers_card .card-body {
+  padding-bottom: 0;
+  padding-right: 0;
+}
+.card#followers_card .card-body ul#followers_list {
+  margin-bottom: 0;
+}
+.card#followers_card .card-body ul#followers_list li:last-child {
+  border-bottom: none !important;
+}
+.card#followers_card .card-body ul#followers_list li {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.267);
+  margin-bottom: 0.5em;
+}
+.card#followers_card .card-body ul#followers_list li img {
+  width: 4em;
+  border: 1px solid rgba(9, 156, 224, 0.363);
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 1em;
+}
+.card#followers_card .card-body ul#followers_list li .follower-info {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 1em;
+}
+.card#followers_card .card-body ul#followers_list li .follower-info strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card#followers_card .card-body ul#followers_list li .follower-info button {
+  color: gray;
+  font-size: 0.8em;
+}
+.card#followers_card .card-body ul#followers_list li .follower-info button:hover, .card#followers_card .card-body ul#followers_list li .follower-info button:hover > svg {
+  color: white;
+}
+.card#followers_card .card-body ul#followers_list li .follower-info button svg {
+  color: rgb(7, 114, 146);
+  height: 16px;
+  margin: 0;
+  margin-bottom: 0.15em;
+  padding: 0;
+}
+
+.card#footer_card {
+  margin-top: 1em;
+}
+.card#footer_card a {
+  text-decoration: none;
+}
+.card#footer_card .card-body {
+  padding-bottom: 0;
+}
+.card#footer_card .card-body a {
+  display: inline-block;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.363);
+  font-size: 0.9em;
+  white-space: nowrap;
+  margin-right: 0.5em;
+}
+
 body {
   padding-top: 4em;
   background-color: #f5f8fa;

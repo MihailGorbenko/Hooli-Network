@@ -1,0 +1,19 @@
+
+
+.card#footer_card {
+    margin-top: 1em;
+    a {
+        text-decoration: none;
+    }
+
+    .card-body {
+        padding-bottom: 0;
+        a {
+            display: inline-block;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.363);
+            font-size: 0.9em;
+            white-space: nowrap;
+            margin-right: 0.5em;
+        }
+    }
+}

@@ -239,7 +239,7 @@
 
                 <!-- Main column -->
 
-                <div id="main_content" class="col-12 col-md-6">
+                <div id="main_content" class="col-12 col-md-9 col-lg-6">
                     <div class="card shadow-lg" id="main_form_card">
 
                         <!-- New message form -->
@@ -375,8 +375,70 @@
                         </ul>
                     </nav>
                 </div>
-                <div id="right_content" class="d-none d-md-block col-md-3">
 
+                <!-- Right column -->
+
+                <div id="right_content" class="d-none d-lg-block col-md-3">
+
+                    <!-- Followers card -->
+
+                        <div id="followers_card" class="card shadow-lg">
+                            <div class="card-header">
+                                Followers
+                            </div>
+                            <div class="card-body">
+
+                                <!-- Followers list -->
+
+                                <ul id="followers_list" class="list-unstyled">
+                                    <li class="folowers_card_node">
+                                        <img src="./images/comment_img2.jpg" class="img-fluid rounded">
+                                        <div class="follower-info">
+                                            <strong id="name">Vitos</strong>
+                                            <button class="btn btn-outline-primary">
+                                                <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#plus-lg"></use>
+                                                </svg>
+                                                <span>Follow</span>
+                                            </button>
+                                        </div>
+                                       
+                                    </li>
+                                    <li class="folowers_card_node">
+                                        <img src="./images/comment_img1.jpg" class="img-fluid rounded">
+                                        <div class="follower-info">
+                                            <strong id="name">Bellfa</strong>
+                                            <button class="btn btn-outline-primary">
+                                                <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#plus-lg"></use>
+                                                </svg>
+                                                <span>Follow</span>
+                                            </button>
+                                        </div>
+                                       
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Footer card -->
+
+                        <div id=footer_card class="card shadow-lg">
+                            <div class="card-body">
+                                &copy; 2022 Hooli Network
+                                <ul class="list-unstyled d-flex flex-wrap">
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Terms & Privacy</a></li>
+                                    <li><a href="#">Help</a></li>
+                                    <li><a href="#">Status</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#">Connect other address book</a>
+                            </div>
+
+                        </div>
                 </div>
             </div>
 
