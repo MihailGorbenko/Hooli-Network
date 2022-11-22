@@ -45,12 +45,22 @@
 
             <div class="collapse navbar-collapse"
                  id="collapseContent">
+ 
 
-                 <!-- Home link -->
+                <ul class="navbar-nav me-auto  mb-lg-0">
 
-                <ul class="navbar-nav me-auto  mb-lg-0 shadow-lg">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link">
+                    <!-- Home link -->
+
+                    <li class="nav-item active d-none d-md-block">
+                        <a href="#" class="nav-link" id="home_link">
+                            <svg id="nav_home_icon" heigth="24" width="24" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#house-fill"></use>
+                            </svg>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item active d-block d-md-none">
+                        <a href="#" class="nav-link" id="home_link_small">
                             <svg id="nav_home_icon" heigth="24" width="24" fill="currentColor">
                                 <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#house-fill"></use>
                             </svg>
@@ -93,7 +103,7 @@
                     </li>
 
                     <li class="nav-item d-block d-lg-none">
-                        <a href="#" class="nav-link">
+                        <a href="#" class="nav-link" id="settings_link_small">
                             <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
                                 <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#gear-fill"></use>
                             </svg>
@@ -143,7 +153,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow-lg">
                     <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#" id="settings_link">Settings</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Logout</a></li>
                 </ul>
@@ -157,7 +167,7 @@
 
     <main>
         <div class="container-fluid">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between" id="main_content">
 
                 <!-- Profile column-->
 
@@ -237,9 +247,9 @@
                     </div>
                 </div>
 
-                <!-- Main column -->
+                <!-- Center column -->
 
-                <div id="main_content" class="col-12 col-md-9 col-lg-6">
+                <div id="center_column_main" class="col-12 col-md-9 col-lg-6">
                     <div class="card shadow-lg" id="main_form_card">
 
                         <!-- New message form -->
@@ -447,5 +457,6 @@
     </main>
     
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/page.js"></script>
 </body>
 </html>

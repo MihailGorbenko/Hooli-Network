@@ -1,0 +1,18 @@
+
+.settings {
+
+    & > #center_column_main {display: none;}
+    & > #pagination {display: none ;}
+    & > #right_content {display: none !important;}
+    & > #profile #profile_photos {display: none !important;}
+    & > #center_column_settings {display: block;}
+}
+
+.home {
+    & > #center_column_main {display: block;}
+    & > #pagination {display: block;}
+    & > #right_column {display: block;}
+    & > #profile_photos {display: block;}
+    & > #center_column_settings {display: none;}
+
+}

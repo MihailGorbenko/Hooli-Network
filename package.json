@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "styles:w": "sass styles/scss/base.scss styles/dist/styles.css --watch --load-path=node_modules/bootstrap/scss/"
+    "styles:w": "sass styles/scss/base.scss styles/dist/styles.css --watch --load-path=node_modules/bootstrap/scss/",
+    "server": "npx live-server",
+    "dev" : "run-p styles:w server"
   },
   "author": "Miha Go",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "sass": "^1.56.1"
   },
   "dependencies": {

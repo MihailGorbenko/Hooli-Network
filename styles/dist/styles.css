@@ -8527,6 +8527,38 @@ nav .post-button svg {
   margin-right: 0.5em;
 }
 
+.settings > #center_column_main {
+  display: none;
+}
+.settings > #pagination {
+  display: none;
+}
+.settings > #right_content {
+  display: none !important;
+}
+.settings > #profile #profile_photos {
+  display: none !important;
+}
+.settings > #center_column_settings {
+  display: block;
+}
+
+.home > #center_column_main {
+  display: block;
+}
+.home > #pagination {
+  display: block;
+}
+.home > #right_column {
+  display: block;
+}
+.home > #profile_photos {
+  display: block;
+}
+.home > #center_column_settings {
+  display: none;
+}
+
 body {
   padding-top: 4em;
   background-color: #f5f8fa;
