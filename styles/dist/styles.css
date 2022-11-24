@@ -8543,7 +8543,7 @@ nav .post-button svg {
   display: block;
 }
 .settings > #center_column_settings {
-  display: block !important;
+  display: block;
 }
 .settings > #profile #left_column_settings {
   display: block !important;
@@ -8589,7 +8589,7 @@ nav .post-button svg {
   border-radius: 5px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   #center_column_settings_small {
     display: block !important;
   }
@@ -8602,6 +8602,12 @@ nav .post-button svg {
     height: 24px;
     position: absolute;
     right: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  #center_column_settings {
+    display: none !important;
   }
 }
 
