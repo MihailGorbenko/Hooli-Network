@@ -20,14 +20,6 @@
                 </svg>
                 Hooli Network
             </a>
-            <!-- Post button -->
-
-            <button class="btn btn-light  post-button d-block d-lg-none">
-                <svg id="post_button_icon" fill="currentColor">
-                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-fill"></use>
-                </svg>
-                Post
-            </button>
 
             <!-- Toggler -->
 
@@ -169,10 +161,10 @@
         <div class="container-fluid">
             <div class="row justify-content-between" id="main_content">
 
-                <!-- Profile column-->
+                <!-- Left column-->
 
                 <div id="profile" class="d-none d-md-block col-md-3 ">
-                    <div class="card shadow-lg" id="profile-resume">
+                    <div class="card shadow-lg" id="profile_card">
                         <img class="card-image-top img-fluid"
                              alt="profile background image"
                              src="./images/profile_photo.jpg"> 
@@ -245,9 +237,49 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Center column -->
+                        <!-- Left column settings -->
+                            <div id="left_column_settings" class="d-none card shadow-lg mt-3">
+                                <div class="card-body">
+                                    <div class="nav nav-pills flex-column">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link  active">
+                                                Account
+                                                <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-right"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#"  class="nav-link">
+                                                Security
+                                                <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-right"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Notifications
+                                                <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-right"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                Design
+                                                <svg id="nav_messages_icon" heigth="24" width="24" fill="currentColor">
+                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-right"></use>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                <!-- Center column main-->
 
                 <div id="center_column_main" class="col-12 col-md-9 col-lg-6">
                     <div class="card shadow-lg" id="main_form_card">
@@ -385,6 +417,93 @@
                         </ul>
                     </nav>
                 </div>
+
+                <!-- Center column settings small -->
+
+                <div id="center_column_settings_small" class="d-none col-12 ">
+                    <div class="card card-body">
+                        <button class="btn btn-outline-primary" data-bs-toggle="collapse" href="#accountCollapse">
+                            Account
+                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-down"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline-primary" data-bs-toggle="collapse" href="#securityCollapse">
+                            Security
+                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-down"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline-primary" data-bs-toggle="collapse" href="#notificationsCollapse">
+                            Notifications
+                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-down"></use>
+                            </svg>
+                        </button>
+                        <button class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#designCollapse">
+                            Design
+                            <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
+                                <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#caret-down"></use>
+                            </svg>
+                        </button>
+                        <div class="collapse collase-horizontal" id="accountCollapse">
+                            <div class="crd card-body">
+                                <p>
+                                    Account settings will be here
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse collase-horizontal" id="notificationsCollapse">
+                            <div class="crd card-body">
+                                <p>
+                                    Notifications settings will be here
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse collase-horizontal" id="securityCollapse">
+                            <div class="crd card-body">
+                                <p>
+                                    Security settings will be here
+                                </p>
+                            </div>
+                        </div>
+                        <div class="collapse collase-horizontal" id="designCollapse">
+                            <div class="crd card-body">
+                                <p>
+                                    Design settings will be here
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center column settings md+ -->
+
+                <div id="center_column_settings" class="d-none col-md-9 ">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#user_info">User info</button>
+                        </li>
+                        <li class="nav-item"  role="presentation">
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#language">Language</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mobile">Mobile</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane fade show active" id="user_info" tabindex="0">
+                            user info
+                        </div>
+                        <div class="tab-pane fade" id="language" tabindex="1">
+                            language
+                        </div>
+                        <div class="tab-pane fade" id="mobile" tabindex="2">
+                            mobile
+                        </div>
+                      </div>
+                </div>
+
 
                 <!-- Right column -->
 

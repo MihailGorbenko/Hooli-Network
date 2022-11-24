@@ -1,18 +1,23 @@
 
 .settings {
 
-    & > #center_column_main {display: none;}
-    & > #pagination {display: none ;}
+    & > #center_column_main {display: none !important;}
+    & > #pagination {display: none !important;}
     & > #right_content {display: none !important;}
     & > #profile #profile_photos {display: none !important;}
-    & > #center_column_settings {display: block;}
+    & > #center_column_settings_small {display: block;}
+    & > #center_column_settings {display: block !important;}
+    & > #profile #left_column_settings {display: block !important;}
+
 }
 
 .home {
-    & > #center_column_main {display: block;}
-    & > #pagination {display: block;}
-    & > #right_column {display: block;}
-    & > #profile_photos {display: block;}
-    & > #center_column_settings {display: none;}
+    & > #center_column_main {display: block !important;}
+    & > #pagination {display: block !important;}
+    & > #right_column {display: block !important;}
+    & > #profile_photos {display: block !important;}
+    & > #center_column_settings_small {display: none !important;}
+    & > #center_column_settings {display: none !important;}
+    & > #profile #left_column_settings {display: none !important;}
 
 }
