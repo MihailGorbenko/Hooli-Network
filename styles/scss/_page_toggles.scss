@@ -8,6 +8,7 @@
     & > #center_column_settings_small {display: block;}
     & > #center_column_settings {display: block;}
     & > #profile #left_column_settings {display: block !important;}
+    & > #right_column_settings {display: block !important;}
 
 }
 
@@ -19,5 +20,6 @@
     & > #center_column_settings_small {display: none !important;}
     & > #center_column_settings {display: none !important;}
     & > #profile #left_column_settings {display: none !important;}
+    & > #right_column_settings {display: none !important;}
 
 }

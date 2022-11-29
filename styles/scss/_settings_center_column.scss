@@ -4,4 +4,34 @@
     @media (max-width:767px) {
         display: none !important;
     }
+
+    #account_tabs {
+        position: relative;
+        z-index: 99;
+        li {
+            border-bottom: 0;
+        }
+    }
+
+    .tab-content{
+       
+
+        #user_info {
+            margin-top: -0.08em;
+            border-top: none !important;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            form {
+               
+                padding: 2em;
+                color:gray;
+
+                button {
+                    width: max-content;
+                }
+            }
+        }
+    }
+
 }

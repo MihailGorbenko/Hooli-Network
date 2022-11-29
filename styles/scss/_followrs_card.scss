@@ -8,62 +8,81 @@
         padding-bottom: 0;
         padding-right: 0;
 
-        ul#followers_list {
+        #followers_list {
             margin-bottom: 0;
 
             li:last-child {
                 border-bottom: none !important;
             }
-
-            li {
-                border-bottom: 2px solid rgba(128, 128, 128, 0.267);
-                margin-bottom: 0.5em;
-
-                img {
-                    width: 4em;
-                    border: 1px solid rgba(9, 156, 224, 0.363);
-                    vertical-align: top;
-                    display: inline-block;
-                    margin-right: 1em;
-                }
-
-                .follower-info {
-                    display: inline-block;
-                    width: fit-content;
-                    margin-bottom: 1em;
-
-                    strong {
-                        display: block;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                    }
-
-                    button {
-                        color: gray;
-                        font-size: 0.8em;
-
-                        &:hover,
-                        &:hover > svg {
-                            color:white;
-                        }
-                       
-    
-                        svg {
-                            color: rgb(7, 114, 146);
-                            height: 16px;
-                            margin: 0;
-                            margin-bottom: 0.15em;
-                            padding: 0;
-    
-                        }
-                    }
-                }
-
-                
-            }
-
-           
         }
     }
 
 }
+
+.folowers_card_node {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.267);
+    margin-bottom: 0.5em;
+
+    img {
+        width: 4em;
+        border: 1px solid rgba(9, 156, 224, 0.363);
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    .follower-info {
+        display: inline-block;
+        width: fit-content;
+        margin-bottom: 1em;
+
+        strong {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        button {
+            color: gray;
+            font-size: 0.8em;
+
+            &:hover,
+            &:hover > svg {
+                color:white;
+            }
+            
+            span {
+                pointer-events: none;
+            }
+           
+
+            svg {
+                pointer-events: none;
+                color: rgb(7, 114, 146);
+                height: 16px;
+                margin: 0;
+                margin-bottom: 0.15em;
+                padding: 0;
+
+            }
+        }
+    }
+
+    
+}
+
+.custom-popover {
+    --bs-popover-border-color: var(--bs-primary);
+    --bs-popover-header-bg: var(--bs-primary);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+
+    .folowers_card_node {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+  }
+
+
+  
