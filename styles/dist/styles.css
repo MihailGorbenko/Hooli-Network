@@ -2708,7 +2708,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #212529;
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .folowers_card_node .follow-button[data-follow-state=follow] {
   --bs-btn-color: #0d6efd;
   --bs-btn-border-color: #0d6efd;
   --bs-btn-hover-color: #fff;
@@ -2742,7 +2742,7 @@ textarea.form-control-lg {
   --bs-gradient: none;
 }
 
-.btn-outline-success {
+.btn-outline-success, .folowers_card_node .follow-button[data-follow-state=following] {
   --bs-btn-color: #198754;
   --bs-btn-border-color: #198754;
   --bs-btn-hover-color: #fff;
@@ -9030,23 +9030,26 @@ nav .post-button svg {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.folowers_card_node .follower-info button {
-  color: gray;
-  font-size: 0.8em;
+.folowers_card_node .follow-button[data-follow-state=follow] {
+  width: 3em;
+  height: 1.6em;
+  background-image: url("../../images/person-fill-add-blue.svg");
+  background-repeat: no-repeat;
+  background-position: 0.8em 0.2em;
 }
-.folowers_card_node .follower-info button:hover, .folowers_card_node .follower-info button:hover > svg {
-  color: white;
+.folowers_card_node .follow-button[data-follow-state=follow]:hover {
+  background-image: url("../../images/person-fill-add-white.svg");
 }
-.folowers_card_node .follower-info button span {
-  pointer-events: none;
+.folowers_card_node .follow-button[data-follow-state=following] {
+  width: 3em;
+  height: 1.5em;
+  background-image: url("../../images/person-fill-check-green.svg");
+  background-repeat: no-repeat;
+  background-position: 0.9em 0.2em;
+  animation: follow_anim 300ms ease-in-out;
 }
-.folowers_card_node .follower-info button svg {
-  pointer-events: none;
-  color: rgb(7, 114, 146);
-  height: 16px;
-  margin: 0;
-  margin-bottom: 0.15em;
-  padding: 0;
+.folowers_card_node .follow-button[data-follow-state=following]:hover {
+  background-image: url("../../images/person-fill-check-white.svg");
 }
 
 .custom-popover {
@@ -9061,6 +9064,14 @@ nav .post-button svg {
   margin-bottom: 0;
 }
 
+@keyframes follow_anim {
+  from {
+    background-position: 0.9em 3em;
+  }
+  to {
+    background-position: 0.9em 0.2em;
+  }
+}
 .card#footer_card {
   margin-top: 1em;
 }

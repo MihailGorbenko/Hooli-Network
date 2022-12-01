@@ -1,6 +1,6 @@
 
 const popoverTemlate = document.querySelector('#follow_popover_template')
-const followButtons = document.querySelectorAll('#follow_button')
+const followButtons = document.querySelectorAll('.follow-button')
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const followingButtonTemlate = document.querySelector('#folowing_button_template')
 
@@ -30,8 +30,6 @@ followButtons.forEach((button) => {
 })
 
 function follow_button_click (button) {
-    button.innerHTML = followingButtonTemlate.innerHTML
-    button.classList.remove('btn-outline-primary')
-    button.classList.add('btn-outline-success')
+    button.dataset.followState = "following"
 
 }

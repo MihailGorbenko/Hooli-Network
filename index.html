@@ -588,16 +588,11 @@
                                         <img src="./images/comment_img2.jpg" class="img-fluid rounded">
                                         <div class="follower-info">
                                             <strong id="name">Vitos</strong>
-                                            <button class="btn btn-outline-primary"
+                                            <button class="btn follow-button"
                                                     data-bs-toggle="popover"
                                                     data-bs-placement="right"
                                                     data-bs-custom-class="custom-popover"
-                                                    id="follow_button">
-
-                                                <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
-                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#plus-lg"></use>
-                                                </svg>
-                                                <span>Follow</span>
+                                                    data-follow-state="follow">
                                             </button>
                                         </div>
                                        
@@ -606,16 +601,11 @@
                                         <img src="./images/comment_img1.jpg" class="img-fluid rounded">
                                         <div class="follower-info">
                                             <strong id="name">Bellfa</strong>
-                                            <button class="btn btn-outline-primary"
+                                            <button class="btn follow-button"
                                                     data-bs-toggle="popover"
                                                     data-bs-placement="right"
                                                     data-bs-custom-class="custom-popover"
-                                                    id="follow_button">
-
-                                                <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
-                                                    <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#plus-lg"></use>
-                                                </svg>
-                                                <span>Follow</span>
+                                                    data-follow-state="follow">
                                             </button>
                                         </div>
                                        
@@ -656,24 +646,10 @@
             <img src="./images/usr3.jpg" class="img-fluid rounded">
             <div class="follower-info">
                 <strong id="name">Ihor</strong>
-                <button class="btn btn-outline-primary" data-pop-suggest-id='1432'>
-                    <svg id="post_button_icon" heigth="16" width="16" fill="currentColor">
-                        <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#plus-lg"></use>
-                    </svg>
-                    <span>Follow</span>
-                </button>
+                <button class="btn follow-button" data-follow-state='follow' data-pop-suggest-id="123"></button>
             </div>
         </div>
     </template>
-
-    <!-- followed state template -->
-    <template id="folowing_button_template">
-        <svg id="post_button_icon" heigth="16" width="16" fill="green">
-            <use href="./node_modules/bootstrap-icons/bootstrap-icons.svg#check-lg"></use>
-        </svg>
-        <span>Following</span>
-    </template>
-
     
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="./js/page.js"></script>

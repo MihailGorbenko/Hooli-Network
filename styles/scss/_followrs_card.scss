@@ -41,34 +41,37 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+    } 
 
-        button {
-            color: gray;
-            font-size: 0.8em;
-
-            &:hover,
-            &:hover > svg {
-                color:white;
-            }
-            
-            span {
-                pointer-events: none;
-            }
-           
-
-            svg {
-                pointer-events: none;
-                color: rgb(7, 114, 146);
-                height: 16px;
-                margin: 0;
-                margin-bottom: 0.15em;
-                padding: 0;
-
-            }
+    .follow-button[data-follow-state="follow"] {
+        @extend .btn-outline-primary;
+        width: 3em;
+        height: 1.6em;
+        background-image: url('../../images/person-fill-add-blue.svg');
+        background-repeat: no-repeat;
+        background-position: 0.8em 0.2em;
+         
+        &:hover {
+            background-image: url('../../images/person-fill-add-white.svg');
         }
+
     }
 
-    
+    .follow-button[data-follow-state="following"] {
+        @extend .btn-outline-success;
+        width: 3em;
+        height: 1.5em;
+        background-image: url('../../images/person-fill-check-green.svg');
+        background-repeat: no-repeat;
+        background-position: 0.9em 0.2em;
+        animation: follow_anim 300ms ease-in-out;
+         
+        &:hover {
+            background-image: url('../../images/person-fill-check-white.svg');
+        }
+
+        
+    }
 }
 
 .custom-popover {
@@ -85,4 +88,13 @@
   }
 
 
-  
+  @keyframes follow_anim {
+
+    from {
+        background-position: 0.9em 3em;
+    }
+
+    to {
+        background-position: 0.9em 0.2em;
+    }
+  }
