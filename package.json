@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "styles:w": "sass styles/scss/base.scss styles/dist/styles.css --watch --load-path=node_modules/bootstrap/scss/",
-    "server": "npx live-server",
-    "dev" : "run-p styles:w server"
+    "server": "nodemon app.js",
+    "dev": "run-p styles:w server",
+    "sync:aws": "rsync -rvP -e ssh --exclude=node_modules --exclude=.git ./ ubuntu@3.123.1.152:/home/ubuntu/hooli-network"
   },
   "author": "Miha Go",
   "license": "ISC",
@@ -17,6 +18,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.2",
-    "bootstrap-icons": "^1.10.2"
+    "bootstrap-icons": "^1.10.2",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
   }
 }
