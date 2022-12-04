@@ -9,18 +9,15 @@ HTTP_PORT = config.get('http_port')
 HTTPS_PORT = config.get('https_port')
 
 const app = express()
-const appSec = express()
 
 app.use(express.static(path.join(__dirname, '/client')))
 app.use('/node_modules', express.static(path.join(__dirname,'/node_modules')))
-appSec.use(express.static(path.join(__dirname, '/client')))
-appSec.use('/node_modules', express.static(path.join(__dirname,'/node_modules')))
 
 http.createServer(app).listen(HTTP_PORT, () => {console.log(`Server listening port ${HTTP_PORT}`);})
 
 https.createServer({
     key: fs.readFileSync('hkeys/key.pem'),
     cert: fs.readFileSync('hkeys/cert.pem')
-},appSec).listen(HTTPS_PORT, () => {console.log(`Server listening port ${HTTPS_PORT}`);})
+},app).listen(HTTPS_PORT, () => {console.log(`Server listening port ${HTTPS_PORT}`);})
 
 
